@@ -16,7 +16,7 @@ if (typeof web3 !== 'undefined') {
                 nonce: Web3.utils.toHex(nonce),
                 gasPrice: Web3.utils.toHex(10),
                 gasLimit: Web3.utils.toHex(3000000),
-                to: '0x1d21d6Ac8F65340a56c84EF4Eb62Bd6Fc9D04E78',
+                to: '0x71b48c96D881A815D37131C242409dd60b88aB24',
                 value: '0x00',
                 data: '0x59e26be1000000000000000000000000ac66e1be03223e4ccac17b1260f05eb925c4812d'
             }

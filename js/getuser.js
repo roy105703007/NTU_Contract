@@ -10,7 +10,7 @@ if (typeof web3 !== 'undefined') {
     const RegistryContractJSON = require('../build/contracts/RegistryContract.json');
     const ContractCareRecordJSON = require('../build/contracts/CareRecordConsent.json');
 
-    const contractAddr = '0x1d21d6Ac8F65340a56c84EF4Eb62Bd6Fc9D04E78';
+    const contractAddr = '0x71b48c96D881A815D37131C242409dd60b88aB24';
     const RegistryContract = new web3.eth.Contract(RegistryContractJSON.abi, contractAddr);
     const CareRecordContract = new web3.eth.Contract(ContractCareRecordJSON.abi);
 
