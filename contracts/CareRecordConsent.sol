@@ -103,6 +103,24 @@ contract CareRecordConsent {
 
     // 新增授權 使用類別 (授權機構，授權對象，類別，開始時間，結束時間)
     function addAuthWithLevel(
+        string memory oid,
+        bytes32[] memory target,
+        uint256[] memory level,
+        uint256 _start,
+        uint256 _end
+    ) public onlyUser {
+        for (uint256 i = 0; i < target.length; i++) {
+            for (uint256 j = 0; j < level.length; j++) {
+                require(_start <= _end);
+                lStart[oid][target[i]][level[j]] = _start;
+                lEnd[oid][target[i]][level[j]] = _end;
+            }
+        }
+        emit AddAuthWithLevelEvent(oid, target, level, _start, _end);
+    }
+
+    // 更改授權 使用類別 舊的(授權機構，授權對象，類別，開始時間，結束時間)＋(授權機構，授權對象，類別，開始時間，結束時間)
+    function updateAuthWithLevel(
         string memory old_oid,
         bytes32[] memory old_target,
         uint256[] memory old_level,
@@ -127,7 +145,6 @@ contract CareRecordConsent {
                 lEnd[oid][target[i]][level[j]] = _end;
             }
         }
-        emit AddAuthWithLevelEvent(oid, target, level, _start, _end);
     }
 
     // 授權詢問紀錄(查詢人機構，查詢人角色，查詢人id，Level1，Level2，sourceKey，現在時間)
