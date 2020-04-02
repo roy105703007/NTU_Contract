@@ -6,7 +6,7 @@ if (typeof web3 !== 'undefined') {
     console.log("321")
 } else {
     // set the provider you want from Web3.providers
-    web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/2cc4b410a12744769c5b7c011fb716fa"));
+    web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/96849b65e61e49acb2b3d396c97e0c37"));
     console.log("123");
     var Tx = require('ethereumjs-tx').Transaction;
     //var privateKey = new Buffer('213AACA6034A6629A4FFCBFE1FC12811A43C296CC99C766F8D61FAED281ACF50', 'hex')
@@ -16,7 +16,7 @@ if (typeof web3 !== 'undefined') {
                 nonce: Web3.utils.toHex(nonce),
                 gasPrice: Web3.utils.toHex(10),
                 gasLimit: Web3.utils.toHex(3000000),
-                to: '0x71b48c96D881A815D37131C242409dd60b88aB24',
+                to: '0x6940E17d756c89F8Da0649B399940F9891340d13',
                 value: '0x00',
                 data: '0x59e26be1000000000000000000000000ac66e1be03223e4ccac17b1260f05eb925c4812d'
             }

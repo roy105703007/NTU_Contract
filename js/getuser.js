@@ -5,7 +5,7 @@ if (typeof web3 !== 'undefined') {
     console.log("321")
 } else {
     // set the provider you want from Web3.providers
-    web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/2cc4b410a12744769c5b7c011fb716fa"));
+    web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/96849b65e61e49acb2b3d396c97e0c37"));
     console.log("123");
     const RegistryContractJSON = require('../build/contracts/RegistryContract.json');
     const ContractCareRecordJSON = require('../build/contracts/CareRecordConsent.json');
