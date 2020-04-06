@@ -10,7 +10,7 @@ if (typeof web3 !== 'undefined') {
     const RegistryContractJSON = require('../build/contracts/RegistryContract.json');
     const ContractCareRecordJSON = require('../build/contracts/CareRecordConsent.json');
 
-    const contractAddr = '0x71b48c96D881A815D37131C242409dd60b88aB24';
+    const contractAddr = '0x6940E17d756c89F8Da0649B399940F9891340d13';
     const RegistryContract = new web3.eth.Contract(RegistryContractJSON.abi, contractAddr);
     const CareRecordContract = new web3.eth.Contract(ContractCareRecordJSON.abi);
 
@@ -21,7 +21,7 @@ if (typeof web3 !== 'undefined') {
     //var txdata = RegistryContract.methods.getUserInfo('A1012').encodeABI()
     var Tx = require('ethereumjs-tx').Transaction;
     //console.log(txdata)
-    RegistryContract.methods.getUserInfo('A130519512').call({
+    RegistryContract.methods.getUserInfo('A0040').call({
             from: '0xAc66E1BE03223e4CCAc17b1260f05EB925c4812D'
         })
         .then(console.log);
