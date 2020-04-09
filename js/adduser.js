@@ -18,7 +18,7 @@ if (typeof web3 !== 'undefined') {
     const userAccount = web3.eth.accounts.privateKeyToAccount(`0x${privateKey}`);
     const userAddr = userAccount.address;
 
-    var txdata = RegistryContract.methods.registerUser('A00003', '0xAc66E1BE03223e4CCAc17b1260f05EB925c4812D', '0xAc66E1BE03223e4CCAc17b1260f05EB925c4812D').encodeABI()
+    var txdata = RegistryContract.methods.registerUser('A001231406', '0xAc66E1BE03223e4CCAc17b1260f05EB925c4812D', '0xAc66E1BE03223e4CCAc17b1260f05EB925c4812D').encodeABI()
     var Tx = require('ethereumjs-tx').Transaction;
     //var privateKey = new Buffer('213AACA6034A6629A4FFCBFE1FC12811A43C296CC99C766F8D61FAED281ACF50', 'hex')
     web3.eth.getTransactionCount('0xAc66E1BE03223e4CCAc17b1260f05EB925c4812D', "pending").then(function(nonce) {
