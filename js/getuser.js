@@ -21,7 +21,7 @@ if (typeof web3 !== 'undefined') {
     //var txdata = RegistryContract.methods.getUserInfo('A1012').encodeABI()
     var Tx = require('ethereumjs-tx').Transaction;
     //console.log(txdata)
-    RegistryContract.methods.getUserInfo('A00005').call({
+    RegistryContract.methods.getUserInfo("A000006").call({
             from: '0xAc66E1BE03223e4CCAc17b1260f05EB925c4812D'
         })
         .then(console.log);

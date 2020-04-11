@@ -22,7 +22,7 @@ if (typeof web3 !== 'undefined') {
     var Tx = require('ethereumjs-tx').Transaction;
     //console.log(txdata)
     var aaa = web3.utils.keccak256('a')
-    CareRecordContract.methods.registryContract().call({
+    CareRecordContract.methods.user().call({
             from: '0xAc66E1BE03223e4CCAc17b1260f05EB925c4812D'
         })
         .then(console.log);
